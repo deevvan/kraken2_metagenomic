@@ -3,14 +3,14 @@ import pandas as pd
 from multiprocessing import Pool
 
 # Main directories
-main_dir = '/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/bowtie2_unhost/unhost_mouse'
+main_dir = '/path/to/RSEM_viral_directory/'
 
-unhost_gtf_dir = '/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP414264_mouse_gtf'
+unhost_gtf_dir = '/path/to/RSEM_viral_directory/SRP_viral_gtf'
 os.makedirs(unhost_gtf_dir, exist_ok=True)
 
 # Convert input SAM files to BAM files
 def sam_to_bam(srr_id):
-    input_sam = os.path.join(main_dir, f"{srr_id}_mouse.sam")
+    input_sam = os.path.join(main_dir, f"{srr_id}_host.sam")
     output_bam = os.path.join(main_dir, f"{srr_id}.bam")
     
     # Check if the output BAM file already exists
@@ -23,8 +23,7 @@ def sam_to_bam(srr_id):
 def run_stringtie_covid(srr_id):
     input_bam = os.path.join(main_dir, f"{srr_id}.bam")
     output_file = os.path.join(unhost_gtf_dir, f"{srr_id}_mouse.gtf")
-    #annotation_file = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/reference_genome/UCSChg38_human.gtf"
-    annotation_file = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/reference_genome/GRCm39_mouse.gff"
+    annotation_file = "/path/to/reference_genome_directory/star_star_cov/cov_MN908947_idx"
     
     # Check if the output file already exists
     if os.path.exists(output_file):
@@ -40,7 +39,7 @@ def process_srr_id(srr_id):
     run_stringtie_covid(srr_id)
 
 if __name__ == "__main__":
-    metadata_csv = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP414264_metadata.csv"
+    metadata_csv = "/path/to/SRP_metadata.csv"
 
     # Read the metadata CSV and get the list of SRR IDs
     df = pd.read_csv(metadata_csv)
