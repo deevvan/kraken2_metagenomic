@@ -31,15 +31,13 @@ def run_star(args):
 
 if __name__ == "__main__":
     # Define input and output directories
-    input_dir = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/expression"
-    # input_dir = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/trial"
-    output_dir = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/expression_viral"
+    input_dir = "/path/to/RSEM_host_directory/"
+    output_dir = "/path/to/RSEM_viral_directory/"
     
-    genome_dir = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/reference_genome/star_cov"
+    genome_dir = "/path/to/reference_genome_directory/star_star_cov/cov_MN908947_idx"
 
     # Read the SRR IDs from the metadata CSV file
-    metadata_csv = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP398274_metadata.csv"
-    # metadata_csv = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/trial/SRP398274_trial.csv"
+    metadata_csv = "/path/to/SRP_metadata.csv"
     df = pd.read_csv(metadata_csv)
     srr_ids = df["Run"].tolist()
 
