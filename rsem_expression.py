@@ -1,3 +1,4 @@
+
 import os
 import pandas as pd
 import multiprocessing
@@ -69,10 +70,10 @@ def process_srr_ids(csv_file, input_dir, reference_genome_dir, output_dir):
         
         
 # Define paths
-csv_file = '/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP279280_metadata.csv'
-input_dir = '/mmfs1/scratch/deewan.bajracharya/SRR_trimmed_man3'
-reference_genome_dir = '/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/reference_genome/star/UCSChg38_human_idx'
-output_dir = '/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/expression_host'
+csv_file = '/path/to/SRP_metadata.csv'
+input_dir = '/path/to/trimmed_SRP_directory/'
+reference_genome_dir = '/path/to/reference_genome_directory/star/UCSChg38_human_idx' # Star genome index for UCSChg38 genome index
+output_dir = '/path/to/RSEM_host_directory/'
 
 # Process SRR IDs
 process_srr_ids(csv_file, input_dir, reference_genome_dir, output_dir)
