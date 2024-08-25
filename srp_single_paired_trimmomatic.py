@@ -1,3 +1,5 @@
+# Python script to trim low quality reads from downloaded SRA runs
+# Compatible for single and pair end reads
 import os
 import subprocess
 import multiprocessing
