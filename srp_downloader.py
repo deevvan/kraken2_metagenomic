@@ -1,3 +1,4 @@
+# Python script to download all SRA runs belonging to desired SRP 
 import os
 import multiprocessing
 import pandas as pd
@@ -37,14 +38,14 @@ def download_srr_files(output_dir, phenodata_file, check_dir):
     pool.join()
 
 
-output_dir = '/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP349864_man3'
+output_dir = '/path/to/SRP_directory/'
 if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-check_dir = '/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP349864_trimmed_man3'
+check_dir = '/path/to/trimmed_SRP_directory/'
 if not os.path.exists(check_dir):
         os.makedirs(check_dir)
 
-phenodata_file = '/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP349864_metadata.csv'
+phenodata_file = '/path/to/SRP_metadata.csv'
 
 download_srr_files(output_dir, phenodata_file, check_dir)
