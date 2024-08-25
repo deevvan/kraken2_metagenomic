@@ -31,10 +31,9 @@ def process_fastq_file(args):
 
 def main():
     # Directory containing FASTQ files
-    directory = "/mmfs1/scratch/deewan.bajracharya/SRR_trimmed_Man3"
-    #directory = "/mmfs1/scratch/deewan.bajracharya/SRR_trial"
+    directory = "/path/to/trimmed_SRP_directory/"
     # Output CSV file
-    output_csv = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/mRNA_reads_count.csv"
+    output_csv = "/path/to/RSEM_viral_directory/mRNA_reads_count.csv"
     
     # List all files in the directory ending with .fastq
     fastq_files = [f for f in os.listdir(directory) if f.endswith('.fastq')]
