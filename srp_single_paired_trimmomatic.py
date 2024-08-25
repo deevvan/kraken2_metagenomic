@@ -4,10 +4,10 @@ import multiprocessing
 from multiprocessing import Pool
 import pandas as pd
 
-input_dir = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP349864_man3"
-output_dir = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP349864_trimmed_man3"
+input_dir = "/path/to/SRP_directory/"
+output_dir = "/path/to/trimmed_SRP_directory/"
 
-phenodata_file = '/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP349864_metadata.csv'
+phenodata_file = '/path/to/SRP_metadata.csv'
 
 # Create the output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
