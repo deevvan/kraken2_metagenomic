@@ -1,7 +1,7 @@
 import os
 
 # Path to the directory containing the GTF files
-gtf_directory = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/SRP414264_mouse_gtf"
+gtf_directory = "/path/to/RSEM_viral_directory/SRP_viral_gtf"
 
 # List all GTF files in the directory
 gtf_files = [f for f in os.listdir(gtf_directory) if f.endswith('.gtf')]
