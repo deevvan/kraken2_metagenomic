@@ -22,8 +22,8 @@ def run_samidx(args):
 
 if __name__ == "__main__":
     # Define input and output directories
-    input_dir = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/expression_viral"
-    output_dir = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/viralCopy_files"
+    input_dir = "/path/to/RSEM_viral_directory/"
+    output_dir = "/path/to/RSEM_viral_directory/viralCopy_directory/"
     
     # Get list of subdirectories (SRR IDs)
     srr_ids = [d for d in os.listdir(input_dir) if os.path.isdir(os.path.join(input_dir, d))]
