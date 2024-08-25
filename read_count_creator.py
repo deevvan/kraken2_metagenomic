@@ -4,7 +4,7 @@ import os
 import pandas as pd
 
 # Define the input directory path
-input_dir = "/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/expression_host"
+input_dir = "/path/to/RSEM_host_directory/"
 
 # Initialize an empty dictionary to store data for each SRR ID
 data = {}
@@ -31,4 +31,4 @@ for subdir in os.listdir(input_dir):
 count_table = pd.concat(data.values(), axis=1, sort=False)
 
 # Write the count table to a CSV file
-count_table.to_csv("/mmfs1/projects/changhui.yan/DeewanB/Manuscript3/RSEM/count_matrix_host.csv")
+count_table.to_csv("/path/to/RSEM_host_directory/count_matrix_host.csv")
